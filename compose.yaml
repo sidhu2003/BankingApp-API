@@ -1,0 +1,17 @@
+version: '3.10'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8180:8180"
+  
+  db:
+    image: mysql:8.0.39
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bankingapp
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin@123
+    ports:
+      - "3306:3306"

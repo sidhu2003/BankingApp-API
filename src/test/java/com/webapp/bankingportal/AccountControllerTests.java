@@ -13,9 +13,12 @@ import com.webapp.bankingportal.dto.PinRequest;
 import com.webapp.bankingportal.dto.PinUpdateRequest;
 import com.webapp.bankingportal.util.ApiMessages;
 import com.webapp.bankingportal.util.JsonUtil;
-
+import org.springframework.test.context.ContextConfiguration;
 import lombok.val;
-
+@ContextConfiguration(locations = {
+        "classpath*:spring/applicationContext.xml",
+        "classpath*:spring/applicationContext-jpa.xml",
+        "classpath*:spring/applicationContext-security.xml" })
 public class AccountControllerTests extends BaseTest {
 
     @Test
